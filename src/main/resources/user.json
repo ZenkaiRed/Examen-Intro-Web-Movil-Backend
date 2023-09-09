@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "rut": "17658963-2",
+    "firstName": "NuevoUsuario",
+    "phone": "123456789"
+  },
+  {
+    "id": 2,
+    "rut": "23456789-1",
+    "firstName": "Marcelo",
+    "phone": "123456789"
+  },
+  {
+    "id": 3,
+    "rut": "12345678-7",
+    "firstName": "Jorge",
+    "phone": "123456789"
+  },
+  {
+    "id": 4,
+    "rut": "25678901-0",
+    "firstName": "David",
+    "phone": "123456789"
+  },
+  {
+    "id": 5,
+    "rut": "34567890-9",
+    "firstName": "Jose",
+    "phone": "123456789"
+  },
+  {
+    "id": 6,
+    "rut": "67890123-1",
+    "firstName": "Ana",
+    "phone": "123456789"
+  },
+  {
+    "id": 7,
+    "rut": "90123456-4",
+    "firstName": "Luis",
+    "phone": "123456789"
+  },
+  {
+    "id": 8,
+    "rut": "34567890-6",
+    "firstName": "Laura",
+    "phone": "123456789"
+  },
+  {
+    "id": 9,
+    "rut": "56789012-8",
+    "firstName": "Carlos",
+    "phone": "123456789"
+  },
+  {
+    "id": 10,
+    "rut": "90123456-3",
+    "firstName": "Isabel",
+    "phone": "123456789"
+  }
+]
