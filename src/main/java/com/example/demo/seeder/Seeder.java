@@ -11,7 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
+
+import java.time.Instant;
+import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 @Component
@@ -30,7 +35,6 @@ public class Seeder implements CommandLineRunner {
         ObjectMapper objectMapper = new ObjectMapper();
         List<User> users = Arrays.asList(objectMapper.readValue(new ClassPathResource("users.json").getFile(), User[].class));
         List<Software> softwares = Arrays.asList(objectMapper.readValue(new ClassPathResource("softwares.json").getFile(), Software[].class));
-        //List<ReserveSeed> reserves = Arrays.asList(objectMapper.readValue(new ClassPathResource("reserves.json").getFile(), ReserveSeed[].class));
 
         // Guardar los usuarios en la base de datos utilizando el servicio y repositorio correspondientes
         for (User user : users){
@@ -41,25 +45,26 @@ public class Seeder implements CommandLineRunner {
             softwareService.save(software);
         }
 
-        /*
+
         // Guardar las reservas en la base de datos utilizando el servicio y repositorio correspondientes
-        for (ReserveSeed reserveSeed : reserves){
 
-            Reserve reserve = new Reserve();
 
-            reserve.setId(reserveSeed.getId());
-            reserve.setReservedAt(reserveSeed.getReservedAt());
+        Reserve reserve = new Reserve();
 
-            User user = userService.findById(reserveSeed.getIdUser());
-            Software software = softwareService.findById(reserveSeed.getIdSoftware());
+        reserve.setId(1);
 
-            reserve.setUser(user);
-            reserve.setSoftware(software);
+        Calendar calendario = Calendar.getInstance();
+        Date fechaActualConCalendar = calendario.getTime();
 
-            reserveService.save(reserve);
+        reserve.setReservedAt(fechaActualConCalendar);
 
-        }
+        User user = userService.findById(1);
+        Software software = softwareService.findById(1);
 
-         */
+        reserve.setUser(user);
+        reserve.setSoftware(software);
+
+        reserveService.save(reserve);
+
     }
 }
