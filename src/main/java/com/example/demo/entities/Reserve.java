@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.Instant;
+import java.util.Date;
 
 @Entity
 @Table(name = "reserve")
@@ -18,7 +18,7 @@ import java.time.Instant;
 public class Reserve extends Base{
 
     @Column(name = "reserved_at")
-    private Instant reservedAt;
+    private Date reservedAt;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_user", referencedColumnName = "id")
     private User user;

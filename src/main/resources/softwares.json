@@ -1,0 +1,12 @@
+[
+  {"id": 1, "name": "Microsoft Office 365"},
+  {"id": 2, "name": "Adobe Creative Cloud"},
+  {"id": 3, "name": "Autodesk AutoCAD"},
+  {"id": 4, "name": "Salesforce CRM"},
+  {"id": 5, "name": "Oracle Database"},
+  {"id": 6, "name": "SAP Business One"},
+  {"id": 7, "name": "QuickBooks Online"},
+  {"id": 8, "name": "SolidWorks"},
+  {"id": 9, "name": "Tableau"},
+  {"id": 10, "name": "Zendesk"}
+]

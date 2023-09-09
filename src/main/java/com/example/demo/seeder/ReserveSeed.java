@@ -15,7 +15,7 @@ import java.util.Date;
 public class ReserveSeed {
 
     private Integer id;
-    private Instant reservedAt;
+    private Date reservedAt;
     private Integer idUser;
     private Integer idSoftware;
 

@@ -30,7 +30,7 @@ public class Seeder implements CommandLineRunner {
         ObjectMapper objectMapper = new ObjectMapper();
         List<User> users = Arrays.asList(objectMapper.readValue(new ClassPathResource("users.json").getFile(), User[].class));
         List<Software> softwares = Arrays.asList(objectMapper.readValue(new ClassPathResource("softwares.json").getFile(), Software[].class));
-        List<ReserveSeed> reserves = Arrays.asList(objectMapper.readValue(new ClassPathResource("reserves.json").getFile(), ReserveSeed[].class));
+        //List<ReserveSeed> reserves = Arrays.asList(objectMapper.readValue(new ClassPathResource("reserves.json").getFile(), ReserveSeed[].class));
 
         // Guardar los usuarios en la base de datos utilizando el servicio y repositorio correspondientes
         for (User user : users){
@@ -40,6 +40,8 @@ public class Seeder implements CommandLineRunner {
         for (Software software : softwares){
             softwareService.save(software);
         }
+
+        /*
         // Guardar las reservas en la base de datos utilizando el servicio y repositorio correspondientes
         for (ReserveSeed reserveSeed : reserves){
 
@@ -57,5 +59,7 @@ public class Seeder implements CommandLineRunner {
             reserveService.save(reserve);
 
         }
+
+         */
     }
 }
